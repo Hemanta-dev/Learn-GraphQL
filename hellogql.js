@@ -1,6 +1,6 @@
 import {ApolloServer,gql} from "apollo-server";
 import {ApolloServerPluginLandingPageGraphQLPlayground} from 'apollo-server-core';
-import { users,quotes } from "./fakeDB.js";
+import { users,quotes } from "./fakeDB.mjs";
 
 
 const typeDefs = gql`

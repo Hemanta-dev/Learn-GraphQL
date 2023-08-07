@@ -36,3 +36,43 @@ query getQuoteByUser{
 }
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mutation CreateUser($UserNew: UserInput!){
+  signupUserDummy(UserNew : $UserNew){
+    id
+    firstName
+    lastName
+    email
+    password
+ 
+ 
+  
+}
+}
+
+#Query Variable
+{
+  "UserNew":{
+    "firstName":"Hero1",
+    "lastName":"don2",
+    "email":"hero1@gmail.com",
+    "password":"123"
+
+  }
+
+}
+
+mutation CreateUser($UserNew: UserInput!){
+  user:signupUserDummy(UserNew : $UserNew){
+    id
+    firstName
+    lastName
+    email
+    password
+ 
+ 
+  
+}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DB="mongodb+srv://adhikarihemanta932:qQT0BERqxQBVtKl3@cluster0.pwshqpo.mongodb.net/Inventory?retryWrites=true&w=majority"
